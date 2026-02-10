@@ -1,127 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shreya | Portfolio</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f4f6f8;
-  color: #333;
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --primary-color: #4f46e5;
+  --button-hover: #6366f1;
 }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a { text-decoration: none; color: inherit; }
 
 header {
-  background: #2c3e50;
-  color: white;
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px 40px 20px;
 }
 
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+}
+
+header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+header p { font-size: 1.2rem; color: #a0a0a0; }
+
+nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+nav a {
+  margin: 0 15px;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover { color: var(--primary-color); }
+
 section {
-  padding: 40px;
   max-width: 900px;
-  margin: auto;
+  margin: 80px auto 40px auto;
+  padding: 0 20px;
 }
 
 h2 {
-  color: #2c3e50;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
 }
 
+.card:hover { transform: translateY(-5px); }
+
 button {
-  padding: 10px 15px;
+  padding: 10px 20px;
   border: none;
-  background: #3498db;
+  background: var(--primary-color);
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover { background: var(--button-hover); }
+
+.project-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tech-icons i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: var(--primary-color);
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #2c3e50;
-  color: white;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  h2 { font-size: 1.5rem; }
+  nav a { margin: 0 10px; font-size: 0.9rem; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
 <header>
+  <img src="profile.jpg" alt="Shreya">
   <h1>Hi, I'm Shreya 👋</h1>
-  <p>Aspiring Power Platform Developer</p>
+  <p>Data Analyst and AI Enthusiast!</p>
 </header>
 
-<section>
-<h2>👩‍💻 About Me</h2>
+<!-- About -->
+<section id="about">
+<h2>About Me</h2>
 <div class="card">
-I am passionate about Power Platform, automation and building solutions that simplify work.  
-Currently building projects in Power Apps and Power Automate.
+<p>Welcome! I’m Shreya, an aspiring business data analyst and AI enthusiast with a passion for turning raw data into meaningful insights. My journey began with exploring automation and low-code solutions, where I discovered how technology can streamline processes, uncover patterns, and solve real-world problems. Over time, I’ve built hands-on experience with tools like Microsoft Power Platform, coupled with a solid foundation in programming and data handling, which has allowed me to create practical, impactful solutions.</p>
+<p>I thrive at the intersection of curiosity, problem-solving, and technology. I enjoy exploring how data can tell stories, drive decisions, and create efficiencies in businesses. Whether it’s building automated workflows, analyzing complex datasets, or experimenting with AI-driven approaches, I approach every challenge with a mindset of learning and innovation.</p>
+<p>Beyond the technical side, I value clarity, collaboration, and creativity. I’m fascinated by how insights from data can influence strategy, improve experiences, and make organizations smarter. My goal is to grow as a professional who not only understands the numbers but can translate them into meaningful action, bridging the gap between technology, data, and business impact.</p>
+<p>As I continue my journey, I’m eager to contribute to projects that challenge me, sharpen my skills, and allow me to explore the evolving landscape of AI and analytics. I’m excited by opportunities where I can combine my curiosity, technical knowledge, and passion for problem-solving to create real value.</p>
 </div>
 </section>
 
-<section>
-<h2>🛠 Skills</h2>
+<!-- Skills -->
+<section id="skills">
+<h2>Skills</h2>
 <div class="card">
-• Power Apps  
-• Power Automate  
-• SharePoint  
-• SQL  
-• Python  
-• Problem Solving
+<div class="tech-icons">
+  <i class="fa-brands fa-python"></i> Python
+  <i class="fa-solid fa-database"></i> SQL
+  <i class="fa-solid fa-cogs"></i> Power Automate
+  <i class="fa-solid fa-mobile-screen-button"></i> Power Apps
+  <i class="fa-brands fa-windows"></i> SharePoint
+</div>
 </div>
 </section>
 
-<section>
-<h2>🚀 Projects</h2>
+<!-- Projects -->
+<section id="projects">
+<h2>Projects</h2>
 
 <div class="card">
+<img src="project1.png" alt="Loan App" class="project-img">
 <h3>Loan Application App</h3>
 <p>Power Apps solution to manage loan workflows.</p>
-<button onclick="alert('Add your GitHub project link here later')">
-View Project
-</button>
+<a href="#"><button>View Project</button></a>
 </div>
 
 <div class="card">
+<img src="project2.png" alt="Automation Flow" class="project-img">
 <h3>Automation Flow</h3>
 <p>Automated approvals using Power Automate.</p>
-<button onclick="alert('Add your GitHub project link here later')">
-View Project
-</button>
+<a href="#"><button>View Project</button></a>
 </div>
 
 </section>
 
-<section>
-<h2>🎓 Education</h2>
+<!-- Education -->
+<section id="education">
+<h2>Education</h2>
 <div class="card">
 Masters in Computer Science  
 TCS Canada Experience
 </div>
 </section>
 
-<section>
-<h2>💼 Experience</h2>
+<!-- Experience -->
+<section id="experience">
+<h2>Experience</h2>
 <div class="card">
 Working on data handling & Power Platform solutions.
 </div>
 </section>
 
-<section>
-<h2>📬 Contact</h2>
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
 <div class="card">
-Email: yourname@email.com  
-LinkedIn: add-link-here
+Email: yourname@email.com<br><br>
+<a href="resume.pdf" download>
+<button>Download My Resume</button>
+</a>
 </div>
 </section>
 
